@@ -98,3 +98,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_CREDENTIALS = True
                         
+CORS_ALLOWED_ORIGINS = [
+
+    "https://sharpay.vercel.app",
+    "http://localhost:8000",
+
+]
