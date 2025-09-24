@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'payments',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -31,6 +32,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'paystack_api.urls'
@@ -81,3 +83,18 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.JSONParser',
     ],
 }
+# Install django-cors-headers first: pip install django-cors-headers
+
+
+
+                        # Allow all origins during development (be more restrictive in production)
+CORS_ALLOW_ALL_ORIGINS = True
+
+                        # OR for production, specify allowed origins:
+                        # CORS_ALLOWED_ORIGINS = [
+                        #     "https://52ab5ca9-49d8-4be0-8550-1701f0a37484.lovableproject.com",
+                        #     "https://your-production-domain.com",
+                        # ]
+
+CORS_ALLOW_CREDENTIALS = True
+                        
