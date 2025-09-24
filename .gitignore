@@ -1,0 +1,14 @@
+# Production
+.env
+*.env.local
+.env.production
+
+# Database
+*.sqlite3
+*.db
+
+# Static files
+staticfiles/
+
+# PyCharm
+.idea/
